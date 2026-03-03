@@ -1,12 +1,12 @@
-import { 
-  BookOpen, 
+import {  
   Home,
   Flag,
   Stone,
   Pickaxe,
   Info,
   BookAlert,
-  ArrowUp01,
+  Settings,
+  Archive,
   LucideIcon
 } from 'lucide-react';
 
@@ -39,9 +39,11 @@ export const navigation: NavItem[] = [
     icon: Info,
   },
   {
-    title: 'Уровни',
-    href: '/pages/levels',
-    icon: ArrowUp01,
+    title: 'Механики',
+    icon: Settings,
+    children: [
+      { title: 'Уровни', href: '/pages/mechanics/levels' },
+    ],
   },
   {
     title: 'Ресурсы',
@@ -59,6 +61,13 @@ export const navigation: NavItem[] = [
     children: [
       { title: 'Киянка', href: '/pages/tools/mallet' },
       { title: 'Фляга', href: '/pages/tools/flask' },
+    ],
+  },
+  {
+    title: 'Шаблоны',
+    icon: Archive,
+    children: [
+      { title: 'Инструменты', href: '/pages/templates/tools' },
     ],
   },
 ];
